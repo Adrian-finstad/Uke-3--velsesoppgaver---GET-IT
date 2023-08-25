@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class>
+        <div onclick="changePrompt(this)" class="redCircle" id="circleOne"></div>
+        <div onclick="blankAll()" class="blueCircle" id="circleTwo"></div>
+    </div>
+
+
+    <script>
+
+
+
+        function changePrompt(element) {
+            /* document.getElementById(id).style.backgroundColor = 'red'*/
+            if (element.style.opacity == 1) {
+                document.getElementById('circleTwo').style.opacity = 1;
+            }
+            else {
+                element.style.opacity = 1;
+            }
+        }
+
+        function blankAll() {
+            document.getElementsByClassName('redCircle')[0].style.opacity = 0.3;
+            document.getElementsByClassName('blueCircle')[0].style.opacity = 0.3;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

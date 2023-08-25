@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div onclick="turnOnColor(this.id)" id="circleOne" class="redCircle circle"></div>
+        <div onclick="turnOnColor(this.id)" id="circleTwo" class="yellowCircle circle"></div>
+        <div onclick="turnOnColor(this.id)" id="circleThree" class="greenCircle circle"></div>
+
+        <br>
+        <!-- <button onclick="redLight('red', 'circleOne')">Trykk her for rødt lys</button>
+        <button onclick="yellowLight('yellow', 'circleTwo')">Trykk her for gult lys</button>
+        <button onclick="greenLight('green', 'circleThree')">Trykk her for grønt grønt lys</button> -->
+    </div>
+
+    <script>
+
+        /*function redLight() {
+            document.getElementById('circleOne').style.backgroundColor = 'red';
+        }
+        function yellowLight() {
+            document.getElementById('circleTwo').style.backgroundColor = 'orange';
+        }*/
+
+        function turnOnColor(id) {
+            turnOffColor();
+            document.getElementById(id).style.opacity = 1;
+        }
+
+        function turnOffColor() {
+            document.getElementById('circleOne').style.opacity = 0.3;
+            document.getElementById('circleTwo').style.opacity = 0.3;
+            document.getElementById('circleThree').style.opacity = 0.3;
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

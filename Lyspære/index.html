@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bulb {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 500px;
+            background-color: gray;
+            border: solid;
+            border-radius: 60%;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .button {
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bulb" id="lightBulb"></div>
+    <br />
+
+    <div class="button">
+        <button onclick="lightSwitch()">LYSBRYTER</button>
+
+    </div>
+
+    <script>
+
+        let powersource = false;
+
+        function lightSwitch() {
+            powersource = !powersource;
+            powerFunction()
+        }
+
+
+        function powerFunction() {
+            if (powersource == true) {
+                document.getElementById('lightBulb').style.backgroundColor = 'yellow';
+                document.getElementById('lightBulb').innerHTML = 'Tadaaa! Nå lyser jeg :D ';
+            }
+            else {
+                document.getElementById('lightBulb').style.backgroundColor = 'gray';
+                document.getElementById('lightBulb').innerHTML = ''
+
+            }
+            console.log('Du skrudde på lyset')
+        }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
